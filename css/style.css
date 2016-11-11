@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/* H5模板 */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+q, blockquote {
+	quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+	content: "";
+	content: none;
+}
+a img {
+	border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+a, img {
+	/* 禁止长按链接与图片弹出菜单 */
+	-webkit-touch-callout: none;
+}
+html, body {
+	/* 禁止选中文本（如无文本选中需求，此为必选项） */
+	-webkit-user-select: none;
+	user-select: none;
+	height: 100%;
+}
+body {
+	position: relative;
+	overflow-y: hidden;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	background-color: #666;
+}
+@media screen and (min-width: 768px) {
+	body {
+		max-width: 340px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+/* 页面CSS */
+#share {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+#bg {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+}
+.header {
+	flex: 1;
+}
+.header img {
+	width: 3.2rem;
+	margin-top: 0.08rem;
+	margin-left: 0.16rem;
+}
+#wrapper {
+	flex: 14;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+}
+#voteWra, #dmSend {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding-right: 2.5rem;
+	flex: 1;
+	position: relative;
+}
+#voteWra img, #dmSend img {
+	height: 1.2rem;
+	display: inline-block;
+}
+#voteWra span, #dmSend span {
+	display: inline-block;
+	padding: 0.1rem;
+	padding-right: 1.8rem;
+	position: absolute;
+	left: 1.6rem;
+	top: 0.3rem;
+}
+#voteWra span, #dmSend span, #danmaku {
+	background: rgba(255, 255, 255, 0.2);
+	color: #92969c;
+	font-size: 0.3rem;
+}
+#voteOk {
+	color: #fff;
+	text-shadow: 0 0 28px #fff;
+	position: absolute;
+	left: 0.08rem;
+	top: 0.7rem;
+	font-size: 0.6rem;
+	opacity: 0;
+}
+#map {
+	position: relative;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background-size: 8.7rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#map img {
+	width: 100%;
+}
+#map a {
+	position: absolute;
+	font-size: 0.3rem;
+	display: block;
+	color: #fff;
+	line-height: 1.5;
+	text-decoration: none;
+	padding: 0.3rem;
+}
+#college0 {
+	left: 1.2rem;
+	top: 2.6rem;
+}
+#college1 {
+	left: 3.2rem;
+	top: 1rem;
+}       
+#college2 {
+	left: 5.2rem;
+	top: 2.8rem;
+}       
+#college3 {
+	left: 4.8rem;
+	top: 5.5rem;
+}       
+#college4 {
+	left: 2.3rem;
+	top: 6.4rem;
+}       
+#college5 {
+	left: 6.9rem;
+	top: 1.6rem;
+}       
+#college6 {
+	left: 6.8rem;
+	top: 3.9rem;
+}       
+#college7 {
+	left: 7.8rem;
+	top: 6.7rem;
+}
+#danmaku {
+	flex: 4;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	margin-bottom: 0.32rem;
+	padding: 0.32rem 0.36rem;
+}
+#dmSection {
+	height: 100%;
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+	min-height: 50px;
+}
+#dmSend span {
+	padding-right: 0;
+	top: 0.4rem !important;
+}
+#dmSend input {
+	display: inline-block;
+	background-color: transparent;
+	border: 0;
+	color: #92969c;
+}
+#dmSend button {
+	display: inline-block;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #31c2de;
+	margin: -0.1rem;
+}
+.danmaku {
+	position: absolute;
+	text-shadow: rgb(0, 0, 0) 0px 0px 2px;
+	font-weight: bold;
+	font-family: SimHei;
+	white-space: nowrap;
+}
