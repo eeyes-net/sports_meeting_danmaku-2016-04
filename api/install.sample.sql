@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS `sports_meeting_danmaku` (
   `position` INT NOT NULL DEFAULT '0' COMMENT '弹幕位置',
   `color` INT NOT NULL DEFAULT '16777215' COMMENT '弹幕颜色',
   `size` INT NOT NULL DEFAULT '1' COMMENT '弹幕大小',
-  `cookie` VARCHAR(40) NULL,
   `ip` VARCHAR(40) NULL COMMENT '来源ip',
   PRIMARY KEY (`id`)
 ) ENGINE = MyISAM CHARSET = utf8 COLLATE utf8_general_ci;
@@ -17,15 +16,14 @@ CREATE TABLE IF NOT EXISTS `sports_meeting_danmaku` (
 CREATE TABLE IF NOT EXISTS `sports_meeting_vote_detail` (
   `id` INT NOT NULL AUTO_INCREMENT COMMENT '序号',
   `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '弹幕发射时间',
-  `votefor` INT NOT NULL COMMENT '投票书院id',
-  `cookie` VARCHAR(40) NULL,
+  `college_id` INT NOT NULL COMMENT '投票书院id',
   `ip` VARCHAR(40) NULL COMMENT '来源ip',
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB CHARSET = utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `sports_meeting_vote_count` (
   `id` INT NOT NULL COMMENT '书院id',
-  `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后修改时间',
+  `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP on UPDATE CURRENT_TIMESTAMP COMMENT '最后修改时间',
   `count` INT NOT NULL DEFAULT '0' COMMENT '书院票数',
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
